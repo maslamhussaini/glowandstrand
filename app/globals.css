@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  /* Brand palette */
+  --color-primary:   #D4723A;
+  --color-accent:    #D4356E;
+  --color-bg:        #FDF6F0;
+  --color-surface:   #FFFFFF;
+  --color-ink:       #1A1510;
+  --color-ink-muted: #756A60;
+  --color-border:    #EAE6E1;
+}
+
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* Selection color */
+::selection {
+  background: #F9AECA;
+  color: #1A1510;
+}
+
+/* Ad unit placeholder — keeps layout stable before ads load */
+.ad-slot {
+  min-height: 90px;
+  background: #F7F5F3;
+  border: 1px dashed #D4CEC6;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #968A7E;
+  letter-spacing: 0.05em;
+}
+
+/* Image hover zoom */
+.img-zoom img {
+  transition: transform 0.4s ease;
+}
+.img-zoom:hover img {
+  transform: scale(1.04);
+}
+
+/* Post grid fade-in */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.5s ease forwards;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F7F5F3; }
+::-webkit-scrollbar-thumb { background: #D4CEC6; border-radius: 3px; }
